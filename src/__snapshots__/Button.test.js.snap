@@ -1,0 +1,12 @@
+exports[`test renders a button 1`] = `
+<div>
+  <p
+    onClick={undefined}>
+    Click me
+  </p>
+  <button
+    onClick={undefined}>
+    Click me for something to happen
+  </button>
+</div>
+`;

@@ -1,0 +1,33 @@
+exports[`test renders with a border 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "yellow",
+      "color": "#ff0000",
+    }
+  }>
+  <h2 />
+  <p />
+  <p>
+    Another line
+  </p>
+</div>
+`;
+
+exports[`test renders with a title 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "yellow",
+      "color": "#ff0000",
+    }
+  }>
+  <h2>
+    My Title
+  </h2>
+  <p />
+  <p>
+    Another line
+  </p>
+</div>
+`;
