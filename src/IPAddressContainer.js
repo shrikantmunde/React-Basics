@@ -1,55 +1,62 @@
-import React, { Component } from 'react';
-import IPAddressComponent from './IPAddressComponent'
-import Text from './Text'
+import React, { Component } from "react";
+import IPAddressComponent from "./IPAddressComponent";
+import Text from "./Text";
 
 class IPAddressContainer extends Component {
   state = {
-    ip: '',
+    ip: "",
     isFetching: false,
-    error: ''
-  }
+    error: "",
+  };
 
   componentDidMount() {
     const onServerResponded = (response) => {
       return response.json();
-    }
+    };
 
     const processJSON = (response) => {
       this.setState({
         ip: response.ip,
-        isFetching: false
-      })
-    }
+        isFetching: false,
+      });
+    };
 
     const onFetchError = (error) => {
       this.setState({
         error: error.message,
-        isFetching: false
-      })
-    }
+        isFetching: false,
+      });
+    };
 
     this.setState({
-      isFetching: true
-    })
+      isFetching: true,
+    });
 
-    window.fetch('https://api.ipify.org/?format=json')
+    window
+      .fetch("https://api.ipify.org/?format=json")
       .then(onServerResponded)
       .then(processJSON)
-      .catch(onFetchError)
+      .catch(onFetchError);
   }
 
-
   render() {
-    const {
-      isFetching,
-      error,
-      ip
-    } = this.state;
+    const { isFetching, error, ip } = this.state;
 
-    return <div>
-     <Text text="Asyn API call using dump component " colorofthat="cyan" isActive={true}/>
-    <IPAddressComponent isFetchingGLobal={isFetching} error={error} ip={ip} loadingMessage='Loading'/>
-    </div>
+    return (
+      <div>
+        <Text
+          text="Asyn API call using dump component "
+          colorofthat="cyan"
+          isActive={true}
+        />
+        <IPAddressComponent
+          isFetchingGLobal={isFetching}
+          error={error}
+          ip={ip}
+          loadingMessage="Loading"
+        />
+      </div>
+    );
   }
 }
 

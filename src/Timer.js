@@ -18,6 +18,7 @@ class Timer extends Component {
 
   componentWillMount(){
     //This gets called before render gets called
+    //This is the only lifecycle method called on server rendering. 
     console.log('I am the first one to get called')
   }
   
@@ -29,7 +30,7 @@ class Timer extends Component {
   componentDidMount() {
     //will get called after render gets called
     console.log('Did Mount getting called after reder')
-    window.setInterval(this.handleTimer, 3000);
+    window.setInterval(this.handleTimer, 1000);
   }
 
   handleTimer = () => {

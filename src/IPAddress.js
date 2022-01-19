@@ -31,7 +31,7 @@ class IPAddress extends Component {
       isFetching: true
     })
 
-    window.fetch('https://api.ipify2.org/?format=json')
+    window.fetch('https://api.ipify1.org/?format=json')
       .then(onServerResponded)
       .then(processJSON)
       .catch(onFetchError)

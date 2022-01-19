@@ -7,8 +7,8 @@ const Text = (props) => {
   if (!props.colorofthat) {
     style.color = 'Green'
   }
-  //  return <p style={style}> Hello World </p>;
-  return  props.isActive && <p style={style}>{props.text}</p>;
+   return <p style={style}> Hello World </p>;
+  // return  props.isActive && <p style={style}>{props.text}</p>;
 };
 
 export default Text;

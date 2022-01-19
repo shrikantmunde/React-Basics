@@ -9,6 +9,7 @@ function App(props) {
   if (props.border == "Red") {
     style.color = 'Black',
     style.border = '2px solid blue'
+    style.backgroundColor = 'skyblue'
   }
 
   return (
